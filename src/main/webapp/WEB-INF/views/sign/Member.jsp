@@ -16,7 +16,7 @@
     <div id="wrap">
         <!-- 회원가입시작 -->
 		<div id="signup">
-    		<form name="regFrm" id="regFrm" action="MemberProc.jsp" method="post">
+    		<form name="regFrm" id="regFrm">
         		<table>
             		<caption><hr><h3>회원가입하기</h3></caption>
             		<tbody>
