@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="spring.basic.odc" />
+	<context:component-scan base-package="pack.spring.gth" />
 	
 	
 	
