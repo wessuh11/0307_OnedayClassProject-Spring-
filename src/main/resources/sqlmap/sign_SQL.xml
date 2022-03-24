@@ -4,11 +4,15 @@
 
 	<insert id="insert" parameterType="hashMap" useGeneratedKeys="true" keyProperty="member_id">
 			<![CDATA[
-			insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, 
-											uEmail, uLevel, sName, sSns)
-			values 
-			(#{uId}, #{uPw}, #{uName}, #{uPhone}, #{uZip}, #{uAddr1}, #{uAddr2}, 
-			#{uEmail}, #{uLevel}, #{sName}, #{sSns})
+				insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, uEmail)
+				values 
+				(#{uId}, #{uPw}, #{uName}, #{uPhone}, #{uZip}, #{uAddr1}, #{uAddr2}, #{uEmail})
 			]]>
 	</insert>
+	
+	<select id="select_checkId" parameterType="hashMap" resultType="hashMap">
+			<![CDATA[
+				select uId from memberList where uId = #{uId}
+			]]>
+	</select>
 </mapper>

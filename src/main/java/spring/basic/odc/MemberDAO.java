@@ -14,4 +14,8 @@ public class MemberDAO {
 	public int insert(Map<String, Object> map) {
 				return this.sqlSessionTemplate.insert("sign.insert", map);
 	}
+	
+	public Map<String, Object> selectCheckId(Map<String, Object> map) {
+		return this.sqlSessionTemplate.selectOne("sign.select_checkId", map);
+	}
 }

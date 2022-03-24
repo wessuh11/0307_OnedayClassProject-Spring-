@@ -20,4 +20,14 @@ public class MemberServiceImp implements MemberService {
 		}
 		return null;
 	}
+	
+	@Override
+	public Map<String, Object> checkId(Map<String, Object> map) {
+		
+		return this.memberDAO.selectCheckId(map);
+	}
+	
+	/*
+	 * @Override public String index() { return null; }
+	 */
 }

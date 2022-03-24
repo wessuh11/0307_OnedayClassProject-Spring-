@@ -16,7 +16,7 @@ $(function(){
 			return;
 		}
 		
-		let url = "IdCheck.jsp?uId=" + uId;
+		let url = "/idCheck?uId=" + uId;
 		let w = screen.width;
 		let popW = 400;
 		let leftP = (w-popW)/2;
