@@ -111,11 +111,15 @@ public class MemberController {
 	}
 	// 로그인 끝
 	
+	//로그아웃
     @RequestMapping("/logout")
-    public ModelAndView logout(HttpSession session) {
+    public ModelAndView logout(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws Exception {
         session.invalidate();
+        String alertMsg = "로그아웃 되었습니다.";
+        ScriptAlertUtils.alertAndMovePage(response, alertMsg, "/");
         ModelAndView mav = new ModelAndView("redirect:/");
         return mav;
     }
+    //로그아웃 끝
 
 }
