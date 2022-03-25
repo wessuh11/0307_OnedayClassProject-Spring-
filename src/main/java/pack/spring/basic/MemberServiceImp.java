@@ -30,8 +30,7 @@ public class MemberServiceImp implements MemberService {
 	 * return this.memberDao.selectList(map); }
 	 */
 	
-	@Override
-	public String index() {
-		return null;
-	}
+	/*
+	 * @Override public String index() { return null; }
+	 */
 }

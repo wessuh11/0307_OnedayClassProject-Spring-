@@ -4,9 +4,9 @@
 	
 <insert id="insert" parameterType="hashMap" useGeneratedKeys="true" keyProperty="member_id">
 		<![CDATA[
-		insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, uEmail, uLevel)
+		insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, uEmail)
 		values
-		(#{uId}, #{uPw}, #{uName}, #{uPhone}, #{uZip}, #{uAddr1}, #{uAddr2}, #{uEmail}, 1)
+		(#{uId}, #{uPw}, #{uName}, #{uPhone}, #{uZip}, #{uAddr1}, #{uAddr2}, #{uEmail})
 		]]>
 	</insert>
 	

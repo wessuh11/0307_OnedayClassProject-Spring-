@@ -14,7 +14,7 @@ public interface MemberService {
 	 * 
 	 * List<Map<String, Object>> list(Map<String, Object> map); // 전체 글보기
 	 */ 	
- 	String index( );
+	/* String index( ); */
  	// 메인페이지(=인덱스 페이지)
 
 }

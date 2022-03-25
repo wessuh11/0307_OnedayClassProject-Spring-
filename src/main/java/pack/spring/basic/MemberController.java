@@ -16,7 +16,7 @@ public class MemberController {
 	
 	// 입력양식 화면 시작
 	@RequestMapping(value="/member", method=RequestMethod.GET)
-	public ModelAndView Member() {
+	public ModelAndView member() {
 		return new ModelAndView("sign/member");
 	}
 	// 입력양식 화면 끝
@@ -25,19 +25,17 @@ public class MemberController {
 	@Autowired
 	MemberService memberService;
 	
-	@RequestMapping(value="/member", method=RequestMethod.POST)
-	public ModelAndView createPost(@RequestParam Map<String, Object> map) {
-		ModelAndView mav  = new ModelAndView();
-		
-		String no = this.memberService.member(map);
-		if (no == null) {
-			mav.setViewName("redirect:/member");
-		} else {
-			mav.setViewName("redirect:/detail?no="+no);
-		}		
-		
-		return mav;
-	}
+	/*
+	 * @RequestMapping(value="/member", method=RequestMethod.POST) public
+	 * ModelAndView createPost(@RequestParam Map<String, Object> map) { ModelAndView
+	 * mav = new ModelAndView();
+	 * 
+	 * String no = this.memberService.member(map); if (no == null) {
+	 * mav.setViewName("redirect:/member"); } else {
+	 * mav.setViewName("redirect:/detail?no="+no); }
+	 * 
+	 * return mav; }
+	 */
 	// 입력양식 데이터 전송 끝
 	
 
@@ -65,16 +63,14 @@ public class MemberController {
 	 */	
 
 	
-	//인덱스 페이지 시작
-	@RequestMapping(value = "/")
-	public ModelAndView index() {
-		
-	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("/index");
-	    return mav;
-	}
-	//인덱스 페이지 끝
-	
+	/*
+	 * //인덱스 페이지 시작
+	 * 
+	 * @RequestMapping(value = "/") public ModelAndView index() {
+	 * 
+	 * ModelAndView mav = new ModelAndView(); mav.setViewName("/index"); return mav;
+	 * } //인덱스 페이지 끝
+	 */
 	
 
 }
