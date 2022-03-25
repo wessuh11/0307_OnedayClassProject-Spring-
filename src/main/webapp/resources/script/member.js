@@ -140,12 +140,12 @@ $(function(){
 				
 	///////////  로그인 페이지 이동 시작 ////////////////
 	$("#loginBtn").click(function(){
-		location.href = "/Proj_OnedayClass/sign/Login.jsp";
+		location.href = "/login";
 	});
 	
 	///////////  메인 페이지 이동 시작 ////////////////
 	$("#mainBtn").click(function(){
-		location.href = "/Proj_OnedayClass/Index.jsp";
+		location.href = "/";
 	});
 		
 
@@ -228,13 +228,13 @@ $(function(){
 	
 	//////////////// 버튼 이동 시작 //////////////////////////////
 	$("#mainBtn").click(function(){   // 메인으로 이동				
-		location.href="/Proj_OnedayClass/Index.jsp";				
+		location.href="/";				
 	});
 	$("#signUpBtn").click(function(){   // 회원가입으로 이동				
-		location.href="/Proj_OnedayClass/sign/Member.jsp";				
+		location.href="/member";				
 	});
 	$("#logoutBtn").click(function(){
-		location.href = "Logout.jsp";
+		location.href = "/logout";
 	});
 	//////////////// 버튼 이동 끝 //////////////////////////////
 	

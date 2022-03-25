@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,39 +10,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>원데이 클래스</title>
-	<link rel="stylesheet" href="${path}/resources/style/style.css">
+	<link rel="stylesheet" href="${path }/resources/style/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 </head>
 <body>
 	<div id="wrap">
-		 <jsp:include page="/WEB-INF/views/include/Header.jsp"></jsp:include>
-			<div id="slide">
-            <div class="swiper-container">
-  				<!-- Additional required wrapper -->
+		<c:import url="/header" charEncoding="UTF-8" />
+		<!-- 헤더 끝 -->
+		<div id="slide">
+           	<div class="swiper-container">
+			<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
-				        <!-- Slides -->
-				        <div class="swiper-slide"><img src="${path}/resources/img/slide/slide1.jpg" width="1500px" height="500px"></div>
-				        <div class="swiper-slide"><img src="${path}/resources/img/slide/slide2.jpg" width="1500px" height="500px"></div>
-				        <div class="swiper-slide"><img src="${path}/resources/img/slide/slide3.jpg" width="1500px" height="500px"></div>
-				    </div>
-				
-				    <!-- If we need pagination 페이지 네이션을 제공-->
-					<!-- <div class="swiper-pagination"></div> -->
-				
-				    <!-- If we need navigation buttons 버튼기능 -->
-				    <div class="swiper-button-prev"></div>
-				    <div class="swiper-button-next"></div>
-				
-				    <!-- If we need scrollbar 스크롤 기능-->
-				 <div class="swiper-scrollbar"></div>
+				<!-- Slides -->
+					<div class="swiper-slide"><img src="${path}/resources/img/slide/slide1.jpg" width="1500px" height="500px"></div>
+					<div class="swiper-slide"><img src="${path}/resources/img/slide/slide2.jpg" width="1500px" height="500px"></div>
+					<div class="swiper-slide"><img src="${path}/resources/img/slide/slide3.jpg" width="1500px" height="500px"></div>
 				</div>
-        	</div>
-            <!-- 슬라이드쇼 방향키 시작 -->
-            </div>
-            <jsp:include page="/WEB-INF/views/include/Footer.jsp"></jsp:include>
-		 <script>
+			
+				<!-- If we need pagination 페이지 네이션을 제공-->
+				<!-- <div class="swiper-pagination"></div> -->
+				
+				<!-- If we need navigation buttons 버튼기능 -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				
+				<!-- If we need scrollbar 스크롤 기능-->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+		<!-- 슬라이드쇼 방향키 시작 -->
+		
+		<c:import url="/footer" charEncoding="UTF-8" />
+		<!-- 푸터 끝 -->
+	</div>
+	
+	<script>
 		 const swiper = new Swiper('.swiper-container', {
 		  //기본 셋팅
 		  //방향 셋팅 vertical 수직, horizontal 수평 설정이 없으면 수평
@@ -94,9 +98,7 @@
 	            },
 	        } */
 		});
-  </script>
-	
+	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 </body>
 </html>
