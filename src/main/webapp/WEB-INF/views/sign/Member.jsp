@@ -14,9 +14,12 @@
 </head>
 <body>
     <div id="wrap">
+    	<c:import url="/header" charEncoding="UTF-8" />
+    	<!-- 헤더 끝 -->
+    
         <!-- 회원가입시작 -->
 		<div id="signup">
-    		<form name="regFrm" id="regFrm">
+    		<form name="regFrm" id="regFrm" method="post">
         		<table>
             		<caption><hr><h3>회원가입하기</h3></caption>
             		<tbody>
@@ -113,6 +116,8 @@
         	</form>
 		</div>
 
+		<c:import url="/footer" charEncoding="UTF-8" />
+		<!-- 푸터 끝 -->
     </div>
     <!-- div#wrap -->
 </body>

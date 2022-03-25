@@ -1,4 +1,4 @@
-package spring.basic.odc;
+package com.odc.member;
 
 import java.util.Map;
 
@@ -12,10 +12,14 @@ public class MemberDAO {
 	SqlSessionTemplate sqlSessionTemplate;
 
 	public int insert(Map<String, Object> map) {
-				return this.sqlSessionTemplate.insert("sign.insert", map);
+		return this.sqlSessionTemplate.insert("sign.insert", map);
 	}
 	
 	public Map<String, Object> selectCheckId(Map<String, Object> map) {
 		return this.sqlSessionTemplate.selectOne("sign.select_checkId", map);
+	}
+	
+	public Map<String,Object> selectLogin(Map<String, Object> map) {
+		return this.sqlSessionTemplate.selectOne("sign.select_login", map);
 	}
 }

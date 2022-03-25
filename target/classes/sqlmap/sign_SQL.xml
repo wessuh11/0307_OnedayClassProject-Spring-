@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="sign">
 
-	<insert id="insert" parameterType="hashMap" useGeneratedKeys="true" keyProperty="member_id">
+	<insert id="insert" parameterType="hashMap">
 			<![CDATA[
 				insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, uEmail)
 				values 
@@ -13,6 +13,12 @@
 	<select id="select_checkId" parameterType="hashMap" resultType="hashMap">
 			<![CDATA[
 				select uId from memberList where uId = #{uId}
+			]]>
+	</select>
+	
+	<select id="select_login" parameterType="hashMap" resultType="hashMap">
+			<![CDATA[
+				select uId, uName, uLevel from memberlist where uId=#{uId} and uPw=#{uPw}
 			]]>
 	</select>
 </mapper>
