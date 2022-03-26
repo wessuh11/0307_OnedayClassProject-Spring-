@@ -26,7 +26,7 @@ public class ScriptAlertUtils {
     	// 사용법 : ScriptAlertUtils.alertAndBackPage(response, "아이디가 중복", "/login.do");
         init(response);
         PrintWriter out = response.getWriter();
-        out.println("<script>alert('" + alertText + "'); history.go(-1);</script>");
+        out.println("<script>alert('" + alertText + "'); history.back();</script>");
         out.flush();
     }
  

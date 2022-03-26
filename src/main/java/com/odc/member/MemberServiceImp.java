@@ -16,7 +16,7 @@ public class MemberServiceImp implements MemberService {
 	public int signUp(Map<String, Object> map) {
 		
 		int affectRowCnt = 0;
-		affectRowCnt = this.memberDAO.insert(map);
+		affectRowCnt = this.memberDAO.insertMember(map);
 
 		return affectRowCnt;
 	}
@@ -35,9 +35,37 @@ public class MemberServiceImp implements MemberService {
 		return this.memberDAO.selectLogin(map);
 	}
 	
-	// 인덱스
-//	@Override
-//	public String index() {
-//		return null;
-//	}
+	// 로그아웃
+	@Override
+	public String logout() {
+		return null;
+	}
+	
+	// 회원정보 확인
+	@Override
+	public Map<String, Object> memberInfo(Map<String, Object> map) {
+		return this.memberDAO.selectMemberInfo(map);
+	}
+	
+	// 회원정보 수정
+	@Override
+	public int memberMod(Map<String, Object> map) {
+		
+		int affectRowCnt = 0;
+		
+		affectRowCnt = this.memberDAO.updateMember(map);
+		
+		return affectRowCnt;
+	}
+	
+	// 회원 탈퇴
+	@Override
+	public int deleteMember(Map<String, Object> map) {
+
+		int affectRowCnt = 0;
+		
+		affectRowCnt = this.memberDAO.deleteMember(map);
+		
+		return affectRowCnt;
+	}
 }

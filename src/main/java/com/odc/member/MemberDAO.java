@@ -11,8 +11,8 @@ public class MemberDAO {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
 
-	public int insert(Map<String, Object> map) {
-		return this.sqlSessionTemplate.insert("sign.insert", map);
+	public int insertMember(Map<String, Object> map) {
+		return this.sqlSessionTemplate.insert("sign.insert_member", map);
 	}
 	
 	public Map<String, Object> selectCheckId(Map<String, Object> map) {
@@ -21,5 +21,17 @@ public class MemberDAO {
 	
 	public Map<String,Object> selectLogin(Map<String, Object> map) {
 		return this.sqlSessionTemplate.selectOne("sign.select_login", map);
+	}
+	
+	public Map<String, Object> selectMemberInfo(Map<String, Object> map) {
+		return this.sqlSessionTemplate.selectOne("sign.select_memberMod", map);
+	}
+	
+	public int updateMember(Map<String, Object> map) {
+		return this.sqlSessionTemplate.update("sign.update_memberMod", map);
+	}
+	
+	public int deleteMember(Map<String, Object> map) {
+		return this.sqlSessionTemplate.delete("sign.delete_member", map);
 	}
 }

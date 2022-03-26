@@ -21,6 +21,7 @@ public class SessionMgr {
 		}
 	}
 	
+	// 세션의 맵의 키와 값을 리턴
 	public static Map<String, Object> outputData(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();

@@ -61,8 +61,8 @@
 								<span>클래스 관리</span>
 								<div id="subMenu1"  class="subContainer">
 									<ul class="subMenu flex-container">           
-										<li class="subMenuLi"><a href="/Proj_OnedayClass/classBBS/ClassPost.jsp">클래스 등록</a></li>
-										<li class="subMenuLi"><a href="/Proj_OnedayClass/classBBS/ClassList.jsp" >클래스 관리</a></li>
+										<li class="subMenuLi"><a href="/ClassPost.jsp">클래스 등록</a></li>
+										<li class="subMenuLi"><a href="/ClassList.jsp" >클래스 관리</a></li>
 									</ul>
 								</div>
 							</li>     
@@ -84,14 +84,14 @@
 							<ul id="subMenuUl"class="subMenu flex-container">
 								<c:choose>
 									<c:when test="${sessData.uLevel eq '1'}">
-										<li class="subMenuLi"><a href="/Proj_OnedayClass/sign/Member_Mod.jsp" id="memModBtn">회원 정보 수정</a></li>
-										<li class="subMenuLi"><a href="/Proj_OnedayClass/levelUp/LvlUpPost.jsp" id="">등업 신청</a></li>
+										<li class="subMenuLi"><a href="/memberMod" id="memModBtn">회원 정보 수정</a></li>
+										<li class="subMenuLi"><a href="/lvlUpPost" id="">등업 신청</a></li>
 										<li class="subMenuLi"><a href="#" id="memDrop">회원 탈퇴</a></li>
 									</c:when>
 									
 									<c:otherwise>
-										<li class="subMenuLi"><a href="/Proj_OnedayClass/sign/Member_Mod.jsp" id="memModBtn">회원 정보 수정</a></li>                                
-										<li class="subMenuLi"><a href="#" id="memDrop">회원 탈퇴</a></li>
+										<li class="subMenuLi"><a href="/memberMod" id="memModBtn">회원 정보 수정</a></li>                                
+										<li class="subMenuLi"><a id="memDrop">회원 탈퇴</a></li>
 									</c:otherwise>
 								</c:choose>
 		                    </ul>
