@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.odc.utils.ScriptAlertUtils;
+import com.odc.utils.SessionMgr;
 
 @Controller
 public class MemberController {
@@ -96,14 +97,8 @@ public class MemberController {
 
 			String alertMsg = "로그인 성공";
 			
-			HttpSession session = request.getSession();
-
-			for (Map.Entry<String, Object> entry : loginMap.entrySet()) {
-				String key = entry.getKey();
-				String val = (String)entry.getValue();
-				session.setAttribute(key, val);
-				System.out.println(key + " " + val);
-			}
+			SessionMgr.inputData(request, loginMap);
+			
 			ScriptAlertUtils.alertAndMovePage(response, alertMsg, "/");
 		}
 		

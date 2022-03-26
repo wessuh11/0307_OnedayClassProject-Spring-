@@ -22,22 +22,22 @@
 	<div id="headerRight">
 		<ul class="flex-container">
 			<c:choose>
-				<c:when test="${not empty uId }">
+				<c:when test="${not empty sessData.uId }">
 					<c:choose>
-						<c:when test="${uLevel eq '3'}">
-							<li><a href="/adminPage">${uName }님 안녕하세요.</a></li>
+						<c:when test="${sessData.uLevel eq '3'}">
+							<li><a href="/adminPage">${sessData.uName }님 안녕하세요.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>                				
 						</c:when>
 						
-						<c:when test="${uLevel eq '2'}">
-							<li><a href="/myPage">${uName }선생님 안녕하세요.</a></li>
+						<c:when test="${sessData.uLevel eq '2'}">
+							<li><a href="/myPage">${sessData.uName }선생님 안녕하세요.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>
 						</c:when>
 						
 						<c:otherwise>
-							<li><a href="/myPage">${uName }님 환영합니다.</a></li>
+							<li><a href="/myPage">${sessData.uName }님 환영합니다.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>
 							<li></li>
