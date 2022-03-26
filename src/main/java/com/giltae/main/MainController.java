@@ -1,4 +1,4 @@
-package com.odc.main;
+package com.giltae.main;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -29,6 +29,7 @@ public class MainController {
 		
 		String uId = null;
 		uId = (String) session.getAttribute("uId");
+		
 		if (uId != null) {			
 			String uName = (String) session.getAttribute("uName");
 			String uLevel = (String) session.getAttribute("uLevel");

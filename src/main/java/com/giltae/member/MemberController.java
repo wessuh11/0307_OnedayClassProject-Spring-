@@ -1,4 +1,4 @@
-package com.odc.member;
+package com.giltae.member;
 
 import java.util.Map;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.odc.utils.ScriptAlertUtils;
+import com.giltae.utils.ScriptAlertUtils;
 
 @Controller
 public class MemberController {

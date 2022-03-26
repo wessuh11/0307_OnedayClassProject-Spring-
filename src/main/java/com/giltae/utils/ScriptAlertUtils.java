@@ -1,4 +1,4 @@
-package com.odc.utils;
+package com.giltae.utils;
 
 import java.io.IOException;
 import java.io.PrintWriter;

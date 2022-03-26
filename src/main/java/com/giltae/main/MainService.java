@@ -1,4 +1,4 @@
-package com.odc.main;
+package com.giltae.main;
 
 public interface MainService {
 

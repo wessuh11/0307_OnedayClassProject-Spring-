@@ -16,7 +16,10 @@
 </head>
 <body>
 	<div id="wrap">
+		<!-- c:import 외부변수 사용가능  -->
 		<c:import url="/header" charEncoding="UTF-8" />
+		<%-- <jsp:include page="/WEB-INF/views/include/Header.jsp"></jsp:include> --%>
+		
 		<!-- 헤더 끝 -->
 		<div id="slide">
            	<div class="swiper-container">

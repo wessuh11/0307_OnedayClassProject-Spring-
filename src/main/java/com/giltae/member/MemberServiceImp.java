@@ -1,4 +1,4 @@
-package com.odc.member;
+package com.giltae.member;
 
 import java.util.Map;
 
@@ -35,9 +35,4 @@ public class MemberServiceImp implements MemberService {
 		return this.memberDAO.selectLogin(map);
 	}
 	
-	// 인덱스
-//	@Override
-//	public String index() {
-//		return null;
-//	}
 }

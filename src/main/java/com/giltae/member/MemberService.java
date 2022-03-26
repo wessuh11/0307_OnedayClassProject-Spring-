@@ -1,4 +1,4 @@
-package com.odc.member;
+package com.giltae.member;
 
 import java.util.Map;
 
@@ -13,6 +13,4 @@ public interface MemberService {
 	// 로그인
 	Map<String, Object> login(Map<String, Object> map);
 	
-	// 인덱스
-//	String index( );
 }
