@@ -54,8 +54,8 @@
 	<div id="wrap">
 		<h2>${param.uId }</h2>
 
+		<!-- 받은 데이터 값이 비었을 경우 -->
 		<c:choose>
-			<!-- 받은 데이터 값이 비었을 경우 -->
 			<c:when test="${empty checkIdData.uId }">
 				<b>사용가능한 아이디입니다.</b>
 				<button type="button" onclick="fnClosePos()">확인</button>

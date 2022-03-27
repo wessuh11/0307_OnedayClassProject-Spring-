@@ -21,8 +21,8 @@
 	
 	<div id="headerRight">
 		<ul class="flex-container">
+			<!-- sessData.uId 값이 있을 경우 -->
 			<c:choose>
-				<!-- sessData.uId 값이 있을 경우 -->
 				<c:when test="${not empty sessData.uId }">
 					<c:choose>
 						<c:when test="${sessData.uLevel eq '3'}">

@@ -71,7 +71,7 @@ public class MemberController {
 		// sql select_checkId 실행후 Map자료형으로 반환
 		// Map 자료형은 key와 value로 짝 지어진 것이다. (ex. uId(key), test1(value))
 		// 여기서 key는 String 자료형, value는 Object 자료형(String으로 형변환 가능)이다.
-		// 여기서는 입력한 uId가 데이터베이스에 있을 경우 해당 uId를 다시 return한다.
+		// 여기서는 입력한 uId가 데이터베이스ㅡ에 있을 경우 해당 uId를 다시 return한다.
 		Map<String, Object> checkIdMap = this.memberService.checkId(map);
 		
 		// view에서 jstl로 부를 수 있게 만들어주는 것 jsp파일 안에서 ${checkIdData.uId} 이렇게 사용한다.
