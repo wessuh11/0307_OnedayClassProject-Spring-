@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletResponse;
 
-// 컨트롤러에서 alert 스크립트 쓸때 사용
+// 컨트롤러에서 alert 스크립트 쓸때 사용, 해당 클래스를 사용하면 redirect가 안된다.
 public class ScriptAlertUtils {
 	public static void init(HttpServletResponse response) {
 		response.setContentType("text/html; charset=UTF-8");

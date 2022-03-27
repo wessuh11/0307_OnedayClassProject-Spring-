@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MemberServiceImp implements MemberService {
+public class MemberServiceImp implements MemberService {	// DAO에서 받은 데이터를 조작하여 Controller에 보낸다
 
 	@Autowired
 	MemberDAO memberDAO;

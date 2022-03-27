@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberDAO {
+public class MemberDAO {	// sql문의 결과를 반환하는 클래스
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
 

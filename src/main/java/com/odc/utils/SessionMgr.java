@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+// 세션의 키와 값을 받거나 내보낼때 사용하기 위한 클래스
 public class SessionMgr {
 	
 	// 세션의 맵의 키와 값을 저장
