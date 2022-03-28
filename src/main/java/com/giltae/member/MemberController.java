@@ -1,3 +1,4 @@
+//5. 생성된 Service를 컨트롤러에 추가
 package com.giltae.member;
 
 import java.util.Map;
