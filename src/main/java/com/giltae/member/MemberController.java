@@ -29,6 +29,7 @@ public class MemberController {
 		
 		String uId = null;
 		uId = (String) session.getAttribute("uId");
+		
 		if (uId != null) {	
 			String alertMsg = "이미 로그인 상태입니다.";
 			ScriptAlertUtils.alertAndMovePage(response, alertMsg, "/");
@@ -121,5 +122,29 @@ public class MemberController {
         return mav;
     }
     //로그아웃 끝
+    
+    //마이페이지
+	@RequestMapping(value = "/mypage")
+	public ModelAndView header(HttpServletRequest request) {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		HttpSession session = request.getSession();
+		
+		String uId = null;
+		uId = (String) session.getAttribute("uId");
+		
+		if (uId != null) {			
+			String uName = (String) session.getAttribute("uName");
+			String uLevel = (String) session.getAttribute("uLevel");
+			
+			mav.addObject("uId", uId);
+			mav.addObject("uName", uName);
+			mav.addObject("uLevel", uLevel);
+		} 
+		
+		return new ModelAndView("sign/MyPage");
+	}
+    //마이페이지 끝
 
 }

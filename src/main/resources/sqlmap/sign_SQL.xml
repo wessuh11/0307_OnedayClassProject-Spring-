@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="sign">
-
+	<!-- 여기서 DB의 데이터를 받아오면  -->
 	<insert id="insert" parameterType="hashMap">
 			<![CDATA[
 				insert into memberList (uId, uPw, uName, uPhone, uZip, uAddr1, uAddr2, uEmail)
