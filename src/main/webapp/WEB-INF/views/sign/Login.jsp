@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="${path }/resources/style/member.css">
 </head>
 <body>
+<%--  	<% if (uId != null) {      %>
+	 <script>
+       	alert("이미 로그인 상태입니다."); 
+		location.href="/Proj_OnedayClass/Index.jsp"; 	
+	</script>
+	  <% } else { // 현재 로그인 상태라면 %> --%> 
     <div id="wrap">
     	<c:import url="/header" charEncoding="UTF-8" />
     	<!-- 헤더 끝 -->
@@ -36,10 +42,10 @@
 						</td>
 					</tr>
 					<tr>
-						<td>						
+						<td colspan="2">						
 							<button type="button" id="loginBtn">로그인</button>
 							<button type="button" id="signUpBtn">회원가입</button>
-						</td>
+						</td>						
 					</tr>
 				</tbody>
 			</table>

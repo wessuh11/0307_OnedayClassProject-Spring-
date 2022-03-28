@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+	<!-- MyBatis 프레임 워크 설정 -> pom.xml에서 DI 설정 -->
+	<!-- Maven의 XML 네임스페이스(내부 식별자에 사용될 수 있는 유효 범위를 제공하는 선언적 영역)를 지정-->
 	<modelVersion>4.0.0</modelVersion>
+	<!-- Maven의 model Version 위에 링크 4.0.0 버전확인.-->
 	<groupId>com.giltae</groupId>
+	<!-- 프로젝트를 생성한 조직 또는 그룹명으로 보통, URL의 역순으로 지정한다. -->
 	<artifactId>giltae</artifactId>
+	<!-- 프로젝트에서 생성되는 기본 아티팩트의 고유 이름이다. -->
 	<name>Proj_OnedayClass</name>
+	<!-- 프로젝트 명 -->
 	<packaging>war</packaging>
+	<!-- jar, war, ear, pom등 패키지 유형을 나타낸다. -->
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<!--애플리케이션의 버전. 접미사로 SNAPSHOT이 붙으면 아직 개발단계라는 의미이며, 
+	메이븐에서 라이브러리를 관리하는 방식이 다르다고 한다.-->
+	
+	<!-- pom.xml에서 공통적으로 사용할 버전 또는 설정 값 정보-->
 	<properties>
+		<!-- 자신의 JDK 버전 -->
 		<java-version>11</java-version>
 		<org.springframework-version>5.2.19.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
@@ -15,6 +27,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+	
+	<!-- 필수내용 : 프로젝트에 import 되는 dependency 목록-->
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -92,7 +106,7 @@
 			<version>1</version>
 		</dependency>
 				
-		<!-- Servlet -->
+		<!-- Servlet, JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -119,44 +133,52 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- database -->
+		<!-- ===== DB 관련 =========== -->
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.5.4</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>2.0.4</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>2.7.0</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4 -->
 		<dependency>
 			<groupId>org.bgee.log4jdbc-log4j2</groupId>
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 			<version>1.16</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.28</version>
-		</dependency>        
+		</dependency>    
+		    
 	</dependencies>
+	
+	<!-- 프로젝트 build 정보-->
     <build>
         <plugins>
             <plugin>
@@ -195,4 +217,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

@@ -36,11 +36,13 @@
 		}
     </style>
     <script>
+    /* 사용가능한 아이디일 경우 */
     function fnClosePos() {    	
     	opener.regFrm.uIdBtnClickChk.value = "1";    
     	opener.regFrm.uId.focus();
     	window.close();
     }
+    /* 중복된 아이디일 경우 */
     function fnCloseNeg() {    	
     	opener.regFrm.uIdBtnClickChk.value = "0";    
     	opener.regFrm.uId.focus();
@@ -52,8 +54,9 @@
 	<div id="wrap">
 		<h2>${param.uId }</h2>
 
+		<!-- 받은 데이터 값이 비었을 경우 -->
 		<c:choose>
-			<c:when test="${empty data.uId }">
+			<c:when test="${empty checkIdData.uId }">
 				<b>사용가능한 아이디입니다.</b>
 				<button type="button" onclick="fnClosePos()">확인</button>
 			</c:when>

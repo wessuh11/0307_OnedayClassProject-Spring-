@@ -10,4 +10,7 @@ public interface MainService {
 	
 	// 푸터
 	String footer();
+	
+	// 마이페이지
+	String myPage();
 }

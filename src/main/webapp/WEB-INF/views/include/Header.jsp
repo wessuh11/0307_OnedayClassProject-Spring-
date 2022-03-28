@@ -21,70 +21,35 @@
 	
 	<div id="headerRight">
 		<ul class="flex-container">
-		
-<%--  			<c:choose>
-				<!-- uLevel -> 3번 관리자등급 -->
-				<c:when test="${not empty uId && uLevel eq '3'}">
-					<li><a href="/adminPage">${uName}님 안녕하세요.</a></li>
-					<li></li>
-					<li><a href="/logout">로그아웃</a></li>                				
-				</c:when>
-				
-				<!-- uLevel -> 2번 관리자등급 -->
-				<c:when test="${not empty uId  && uLevel eq '2'}">
-					<li><a href="/myPage">${uName}선생님 안녕하세요.</a></li>
-					<li></li>
-					<li><a href="/logout">로그아웃</a></li>
-				</c:when>
-				
-				<c:when test="${not empty uId}">
-					<li><a href="/myPage">${uName}님 환영합니다.</a></li>
-					<li></li>
-					<li><a href="/logout">로그아웃</a></li>
-					<li></li>
-					<li>
-						<div id="headerCart">
-							<a href="/cart.jsp"><img src="${path}/resources/img/cart.png" alt=""><span><${cartCnt}</span></a>
-						</div>
-					</li>
-				</c:when>
-				
-				<c:otherwise>
-					<li><a href="/login">Sign In</a></li>
-					<li></li>
-					<li><a href="/member">Sign Up</a></li>
-				</c:otherwise>
-				
-			</c:choose> --%>
-			
-   			<c:choose>
-				<c:when test="${not empty uId }">
+			<!-- sessData.uId 값이 있을 경우 -->
+			<c:choose>
+				<c:when test="${not empty sessData.uId }">
 					<c:choose>
-						<c:when test="${uLevel eq '3'}">
-							<li><a href="/mypage">${uName}님 안녕하세요.</a></li>
+						<c:when test="${sessData.uLevel eq '3'}">
+							<li><a href="/adminPage">${sessData.uName }님 안녕하세요.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>                				
 						</c:when>
 						
-						<c:when test="${uLevel eq '2'}">
-							<li><a href="/mypage">${uName} 선생님 안녕하세요.</a></li>
+						<c:when test="${sessData.uLevel eq '2'}">
+							<li><a href="/myPage">${sessData.uName }선생님 안녕하세요.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>
 						</c:when>
 						
 						<c:otherwise>
-							<li><a href="/mypage">${uName}님 환영합니다.</a></li>
+							<li><a href="/myPage">${sessData.uName }님 환영합니다.</a></li>
 							<li></li>
 							<li><a href="/logout">로그아웃</a></li>
 							<li></li>
 							<li>
 							<div id="headerCart">
-							<a href="/cart.jsp"><img src="${path }/resources/img/cart.png" alt=""><span>${cartCnt }</span></a>
+							<a href="/cart.jsp"><img src="${path }/resources/img/cart.png" alt=""><span><%-- <%=cartCnt %> --%>0</span></a>
 							</div>
 							</li>
 						</c:otherwise>
 					</c:choose>
-				</c:when> 
+				</c:when>
 				
 				<c:otherwise>
 					<li><a href="/login">Sign In</a></li>
@@ -92,7 +57,6 @@
 					<li><a href="/member">Sign Up</a></li>
 				</c:otherwise>
 			</c:choose>
-				
 		</ul>
 	</div>
 	<!-- div#headerRight -->

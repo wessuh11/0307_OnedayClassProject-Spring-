@@ -20,4 +20,8 @@ public class MainServiceImp implements MainService {
 		return null;
 	}
 
+	@Override
+	public String myPage() {
+		return null;
+	}
 }
