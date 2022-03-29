@@ -1,5 +1,4 @@
-//4. 컨트롤러와 DAO 연결 및 DAO에서 실행할 메서드 지정(실체메서드)
-package com.giltae.member;
+package com.giltae.classbbs;
 
 import java.util.Map;
 
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service;
 // 해당 클래스를 루트 컨테이너에 빈(Bean) 객체로 생성해주는 어노테이션입니다.
 // DB에 접근하는 코드는 repository에 위임하고, 비즈니스 로직과 관련된 모든 코드가 모여있음.
 
-public class MemberServiceImp implements MemberService {
+public class ClassServiceImp implements MemberService {
 					//구현클래스명                                    인터페이스명
 
 	@Autowired
